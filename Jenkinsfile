@@ -10,14 +10,6 @@ pipeline {
     stages {
 
         stage('Yarn Install') {
-
-            agent {
-                docker {
-                    image "${env.NODE_IMAGE}"
-                    args "${env.NODE_IMAGE_ARGS}"
-                }
-            }
-
             steps {
                 echo 'Yarn Install'
                 echo '******************************'  
